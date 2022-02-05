@@ -17,14 +17,14 @@ public class App {
 
         try (Connection connection = DriverManager.getConnection(Configuration.URL, Configuration.USER, Configuration.PASSWORD)) {
 
-            PreparedStatement ps = connection.prepareStatement(" select * from table_name");
+            PreparedStatement ps = connection.prepareStatement(" select * from experimental_db.person");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                String column1 = rs.getString("colum1");
-                String column2 = rs.getString("colum2");
+                String column1 = rs.getString("name");
+                String column2 = rs.getString("email");
 
-                System.out.println("カラム１:" + column1 + "  カラム2:" + column1);
+                System.out.println("name:" + column1 + "  email:" + column2);
 
             }
         } catch (Exception ex) {
