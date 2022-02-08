@@ -2,6 +2,8 @@
 ```zsh
 docker compose build --no-cache
 docker compose up -d
+※エラーが発生して、コンテナが起動しない時は下記参照
+https://www.yukiiworks.com/archives/32660
 ```
 
 ### コンテナにアクセス
